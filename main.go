@@ -1,10 +1,17 @@
-package main
+package main 
 
-import "fmt"
+import(
+	"fmt"
+	"os"
+	"bufio"
+	"strings"
+)
 
-func main() {
-	var w, h int
-	fmt.Scan(&w, &h)
-	area := w * h 
-	fmt.Print(area)
+func main()  {
+	r := bufio.NewReader(os.Stdin)
+	line, _ := r.ReadString('\n')
+	line = strings.TrimRight(line, "\r\n")
+	// Print the upper case version
+  line = strings.ToUpper(line)
+	fmt.Println(line)
 }
