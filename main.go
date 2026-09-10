@@ -21,6 +21,6 @@ func main()  {
 		case num % 5 == 0:
 			fmt.Println("Buzz")
 		default:
-			fmt.Printls(num)
+			fmt.Println(num)
 	}
 }
