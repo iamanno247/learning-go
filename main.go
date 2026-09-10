@@ -2,25 +2,20 @@ package main
 
 import (
 	"fmt"
-	"strings"
 	"os"
+	"strings"
 	"strconv"
 	"bufio"
 )
 
 func main()  {
 	r := bufio.NewReader(os.Stdin)
-	numstr, _ := r.ReadString('\n')
-	numstr = strings.TrimRight(numstr, "\r\n")
-	num, _ := strconv.Atoi(numstr)
-	switch {
-		case num % 3 == 0 && num % 5 == 0:
-			fmt.Println("FizzBuzz")
-		case num % 3 == 0:
-			fmt.Println("Fizz")
-		case num % 5 == 0:
-			fmt.Println("Buzz")
-		default:
-			fmt.Println(num)
+	numStr, _ := r.ReadString('\n')
+	numStr = strings.TrimRight(numStr, "\r\n")
+	num, _ := strconv.Atoi(numStr)
+	total := 0
+	for i := 1; i <= num; i++ {
+		total += i
 	}
+	fmt.Println(total)
 }
