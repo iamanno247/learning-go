@@ -1,17 +1,19 @@
-package main 
+package main
 
-import(
-	"fmt"
-	"os"
-	"bufio"
-	"strings"
+import (
+    "bufio"
+    "fmt"
+    "os"
+    "strconv"
+    "strings"
 )
 
-func main()  {
-	r := bufio.NewReader(os.Stdin)
-	line, _ := r.ReadString('\n')
-	line = strings.TrimRight(line, "\r\n")
-	// Print the upper case version
-  line = strings.ToUpper(line)
-	fmt.Println(line)
+func main() {
+    r := bufio.NewReader(os.Stdin)
+    name, _ := r.ReadString('\n')
+    name = strings.TrimRight(name, "\r\n")
+    ageStr, _ := r.ReadString('\n')
+    ageStr = strings.TrimRight(ageStr, "\r\n")
+    age, _ := strconv.Atoi(ageStr)
+		fmt.Printf("Hi, %s! You are %d years old.\n", name, age)
 }
